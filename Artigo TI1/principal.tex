@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Template de Artigo Adaptado para Trabalho de Conclusão de Curso - SI Contagem - PUCMINAS %%%%%%%%%%%%%%%%%%%%%%%%
+%% codificação UTF-8 - Abntex - Latex -  							     %%
+%% Autor da primeira versão:    Fábio Leandro Rodrigues Cordeiro  (fabioleandro@pucminas.br)                            %% 
+%% Co-autor da primeira versão: Prof. João Paulo Domingos Silva, Harison da Silva e Anderson Carvalho                   %%
+%% Revisores normas NBR (Padrão PUC Minas) da primeira versão: Helenice Rego Cunha e Prof. Theldo Cruz                  %%
+%% Versão: 1.1     18 de dezembro 2015                     	                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[a4paper,12pt]{article}
+\usepackage{times}
+\usepackage{abakos}  %pacote com padrão da Abakos baseado no padrão da PUC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Capa da revista
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{page}{80} %iniciar contador de pagina de valor especificado
+\newcommand{\monog}{SMN-Q: Sistema de Monitoramento e Notificação de Eventos de Queda em Pacientes Idosos baseado em Arduino e Acelerômetro}
+%\newcommand{\monogES}{Article template Institute of Mathematical Sciences and Informatics}
+\newcommand{\tipo}{Artigo}  % Especificar a seção tipo do trabalho: Artigo, Resumo, Tese, Dociê etc
+%\newcommand{\origem}{Brasil}
+%\newcommand{\editorial}{Belo Horizonte, p. 01-11, nov. 2024}  % p. xx-xx – páginas inicial-final do artigo
+\newcommand{\editorial}{}  
+\newcommand{\lcc}{\scriptsize{Licença Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported}}
+
+%%%%%%%%%%%%%%%%%INFORMAÇÕES SOBRE OS AUTORES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AutorA}{Eduardo Aguiar da Silva}
+\newcommand{\funcaoA}{}
+\newcommand{\emailA}{\href{mailto:1664483@sga.pucminas.br}{1664483@sga.pucminas.br}}
+\newcommand{\cursA}{Aluno do Programa de Graduação em Sistemas de Informação}
+
+\newcommand{\AutorB}{Lucas Bernardo Souza de Oliveira}
+\newcommand{\funcaoB}{}
+\newcommand{\emailB}{\href{mailto:1664663@sga.pucminas.br}{1664663@sga.pucminas.br}}
+\newcommand{\cursB}{Aluno do Programa de Graduação em Sistemas de Informação}
+
+\newcommand{\AutorC}{Sarah Almeida Guimarães Costa}
+\newcommand{\funcaoC}{}
+\newcommand{\emailC}{\href{mailto:1664595@sga.pucminas.br}{1664595@sga.pucminas.br}}
+\newcommand{\cursC}{Aluna do Programa de Graduação em Sistemas de Informação}
+
+\newcommand{\AutorD}{Luiz Felipe da Silva Pereira Santos}
+\newcommand{\funcaoD}{}
+\newcommand{\emailD}{\href{mailto:1644726@sga.pucminas.br}{1644726@sga.pucminas.br}}
+\newcommand{\cursD}{Aluno do Programa de Graduação em Sistemas de Informação}
+% 
+% Definir macros para o nome da Instituição, da Faculdade, etc.
+\newcommand{\univ}{Pontifícia Universidade Católica de Minas Gerais}
+
+\newcommand{\keyword}[1]{\textsf{#1}}
+
+%Para as URLS não ultrapassarem a margem
+\usepackage{url}
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+\usepackage{adjustbox} % reduzir tamanho figuras
+
+\usetikzlibrary{arrows,shapes,positioning,shadows,trees}
+
+\tikzset{
+  basic/.style  = {draw, text width=3cm, drop shadow, font=\sffamily, rectangle},
+  root/.style   = {basic, rounded corners=2pt, thin, align=center,
+                   fill=blue!30},
+  level 2/.style = {basic, rounded corners=6pt, thin,align=center, fill=green!30,
+                   text width=8em},
+  level 3/.style = {basic, thin, align=left, fill=pink!60, text width=6.5em}
+}
+
+\begin{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Pagina de titulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+\includegraphics[scale=0.2]{figuras/brasao.jpg} \\
+PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS \\
+Instituto de Ciências Exatas e de Informática
+
+% \vspace{1.0cm}
+
+\end{center}
+
+ \vspace{0cm}
+ \begin{singlespace}
+ \begin{center}
+ \large
+ \monog\footnote{Artigo apresentado ao Instituto de Ciências Exatas e Informática da Pontifícia Universidade Católica de Minas Gerais, campus Contagem, como pré-requisito parcial para obtenção do título de Bacharel em Sistemas de Informação.}
+ \end{center}
+ \end{singlespace}
+
+\vspace{0.5cm}
+
+\begin{flushright}
+\singlespacing
+\normalsize{\AutorA \footnote{\funcaoA \cursA \,-- \emailA . }} \\
+\normalsize{\AutorB \footnote{\funcaoB \cursB \,-- \emailB . }} \\
+\normalsize{\AutorC \footnote{\funcaoC \cursC \,-- \emailC . }} \\
+\normalsize{\AutorD \footnote{\funcaoD \cursD \,-- \emailD . }} \\
+\end{flushright}
+\thispagestyle{empty}
+
+\vspace{0.5cm}
+
+\begin{abstract}
+\noindent
+Quedas em idosos são um dos maiores problemas de saúde pública envolvendo essa faixa etária, configurando-se como a segunda maior causa de mortes acidentais no mundo. Um fator que agrava bastante o quadro é o tempo de permanência da vítima no solo sem socorro, fenômeno conhecido como \textit{long lie}. Soluções comerciais existentes apresentam custos mensais entre R\$ 150,00 e R\$ 300,00, valor inviável para grande parte da população idosa brasileira. Este trabalho apresenta o SMN-Q, um Sistema de Monitoramento e Notificação de Eventos de Queda de baixo custo, baseado em Arduino e acelerômetro MMA7361. O algoritmo utiliza cálculo da magnitude resultante da aceleração combinado com filtro de média móvel, e o sistema oferece calibração de sensibilidade via potenciômetro e janela de 15 segundos para cancelamento manual em casos de falso positivo. O protótipo foi implementado e validado em ambiente de simulação Tinkercad, atendendo a todos os requisitos funcionais propostos.
+\\\textbf{\keyword{Palavras-chave:}} detecção de quedas; idosos; Arduino; acelerômetro; saúde pública.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\selectlanguage{english}
+\begin{abstract}
+\noindent
+Falls among the elderly are one of the most significant public health concerns affecting this age group, ranking as the second leading cause of accidental deaths worldwide. A factor that considerably worsens the situation is the time the victim remains on the ground without assistance, a phenomenon known as ``long lie''. Existing commercial solutions have monthly costs between R\$ 150.00 and R\$ 300.00, an amount that is unaffordable for most of the Brazilian elderly population. This work presents SMN-Q, a low-cost Fall Event Monitoring and Notification System based on Arduino and the MMA7361 accelerometer. The algorithm uses the calculation of resultant acceleration magnitude combined with a moving-average filter, and the system offers sensitivity calibration via potentiometer along with a 15-second window for manual cancellation in cases of false positives. The prototype was implemented and validated in the Tinkercad simulation environment, meeting all the proposed functional requirements.
+\\\textbf{\keyword{Keywords:}} fall detection; elderly; Arduino; accelerometer; public health.
+\end{abstract}
+
+\selectlanguage{brazilian}
+ \onehalfspace  % espaçamento 1.5 entre linhas
+ \setlength{\parindent}{1.25cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INICIO DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{textos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \selectlanguage{brazil}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Inicio bibliografia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \newpage
+\singlespace{
+\renewcommand\refname{REFERÊNCIAS}
+\bibliography{bibliografia}
+}
+
+%Inclusão do arquivo abntex2-alf.bst como solução para adequação à ABNT NBR 10520:2023 quanto às citações, que não são mais em caixa-alta
+\bibliographystyle{abntex2-alf.bst}
+
+\end{document}
