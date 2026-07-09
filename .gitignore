@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# LaTeX auxiliares
+*.aux
+*.log
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz

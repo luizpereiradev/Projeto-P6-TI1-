@@ -1,0 +1,50 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v<VERSION> }
+
+\bibitem[Cabral 2022]{cabral2022}
+\abntrefinfo{Cabral}{Cabral}{2022}
+{CABRAL, I.~A.
+\textbf{Protótipo de computação vestível para monitoramento de locomoção
+  de idoso utilizando Node-RED com ESP32 e Raspberry Pi}.
+2022. 60~f. Monografia (Trabalho de Conclusão de Curso em Engenharia
+  Elétrica/Eletrônica) --- Universidade Federal do Amazonas, Manaus, 2022.
+  Disponível em:
+  \url{https://riu.ufam.edu.br/bitstream/prefix/6140/2/TCC_IsabellaCabral.pdf}.
+  Acesso em: 10 maio 2026.}
+
+\bibitem[Cunha e Lourenço 2014]{cunha2014}
+\abntrefinfo{Cunha e Lourenço}{Cunha; Lourenço}{2014}
+{CUNHA, A.~A.; LOURENçO, R.~A. Quedas em idoso: prevalências e fatores
+  associados.
+\textbf{Revista Hospital Universitário Pedro Ernesto}, v.~12, n.~2, p. 21--29,
+  abr./jun. 2014.}
+
+\bibitem[Ren e Shi 2015]{ren2015}
+\abntrefinfo{Ren e Shi}{Ren; Shi}{2015}
+{REN, L.; SHI, W. Chameleon: Personalised and adaptive fall detection of
+  elderly people in home-based environments.
+\textbf{International Journal of Sensor Networks}, v.~17, n.~1, p. 1--13, 2015.
+Disponível em: \url{https://weisongshi.org/papers/ren15-Chameleon.pdf}. Acesso
+  em: 10 maio 2026.}
+
+\bibitem[Vieira e Araújo 2019]{vieira2019}
+\abntrefinfo{Vieira e Araújo}{Vieira; Araújo}{2019}
+{VIEIRA, J. P. B.~G.; ARAúJO, M. H.~M.
+\textbf{Sistema de detecção e alerta de quedas para idosos}.
+2019. 73~f. Monografia (Trabalho de Graduação em Engenharia de Redes de
+  Comunicação) --- Universidade de Brasília, Brasília, 2019. Disponível
+  em:
+  \url{https://bdm.unb.br/bitstream/10483/27845/1/2019_JoaoPauloVieira_MatheusHenriqueAraujo_tcc.pdf}.
+  Acesso em: 10 maio 2026.}
+
+\bibitem[{World Health Organization} 2018]{who2018}
+\abntrefinfo{{World Health Organization}}{{World Health Organization}}{2018}
+{{World Health Organization}. \textbf{Falls -- Key facts}. 2018.
+  \url{https://www.who.int/news-room/fact-sheets/detail/falls}.
+Acesso em: 10 maio 2026.}
+
+\end{thebibliography}
