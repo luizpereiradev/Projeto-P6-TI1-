@@ -85,19 +85,19 @@ Para receber as notificações, procure o dispositivo **`SMN-Q Detector`** em um
 
 ```
 ├── p6ti1.ino          # firmware do ESP32-C3
-├── ArtigoTI1P6/       # artigo científico (versão atual)
+├── RelatorioTI1P6/    # relatório (versão atual)
 │   ├── principal.tex  # preâmbulo, capa, resumo/abstract
-│   ├── textos.tex     # corpo do artigo
+│   ├── textos.tex     # corpo do relatório
 │   ├── bibliografia.bib
 │   ├── figuras/
 │   └── principal.pdf  # PDF compilado
-└── Artigo TI1/        # versão anterior do artigo
+└── Relatorio TI1/     # versão anterior do relatório
 ```
 
-O artigo usa o template ABNTeX2 da PUC Minas (pacote `abakos`). Para compilar:
+O relatório usa o template ABNTeX2 da PUC Minas (pacote `abakos`). Para compilar:
 
 ```sh
-cd ArtigoTI1P6
+cd RelatorioTI1P6
 pdflatex principal && bibtex principal && pdflatex principal && pdflatex principal
 ```
 
